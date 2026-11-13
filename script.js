@@ -1,6 +1,6 @@
 const makeChange = (c) => {
-  // your name here
-	function makeChange(amount) {
+  let amount = Number(c); // prompt gives string, convert to number
+
   let q = Math.floor(amount / 25);
   amount = amount % 25;
 
@@ -10,13 +10,9 @@ const makeChange = (c) => {
   let n = Math.floor(amount / 5);
   amount = amount % 5;
 
-  let p = amount; // remaining is pennies
+  let p = amount;
 
   return { q, d, n, p };
-}
-
-console.log(makeChange(47)); // { q: 1, d: 2, n: 0, p: 2 }
-console.log(makeChange(24)); // { q: 0, d: 2, n: 0, p: 4 }
 };
 
 // Do not the change the code below
